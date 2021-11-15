@@ -1,0 +1,32 @@
+.header {
+    position: relative;
+    top: 0;
+    min-height: 80px;
+    max-height: 80px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 0px 15px;
+}
+
+/* .aboutUS2{
+    position: absolute;
+    left: 80%;
+    margin-right: 50%;
+    cursor: pointer;
+    color:white;
+}
+
+.faq2 {
+    left: 90%;
+    position: absolute;
+    cursor: pointer;
+    color:white;
+} */

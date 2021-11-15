@@ -1,0 +1,95 @@
+.Login {
+    position: absolute;
+    bottom: 30%;
+    height: 85vh; /* Magic here */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formInputUsername, .formInputPassword {
+    position: absolute;
+    left: 45%;
+}
+
+.formInputUsername {
+    top: 46.5%;
+}
+
+.formInputPassword {
+    top: 51%;
+}
+
+
+.loginForm {
+    width: 20%;
+    height: 20%;
+    border-style: groove;
+    border-radius: 5%;
+    padding: 25px;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorLogin {
+    position: absolute;
+    top: 65%;
+    left: 43.7%;
+    color: red;
+    font-weight: 700;
+}
+
+.loginButton {
+    position: absolute;
+    width: 6%;
+    height: 4%;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color:white;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.asGuestButton {
+    position: absolute;
+    left: 50%;
+    width: 6%;
+    height: 4%;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color:white;
+    margin-top: 25px;
+    margin-left: 40px;
+    margin-right: 25px;
+}
+
+.infoMessage {
+    text-align: center;
+    position: absolute;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    top: 70%;
+}
+
+.signature {
+    text-align: center;
+    position: absolute;
+    width: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+    top: 80%;
+    font-style: italic;
+}
+
+

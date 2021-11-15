@@ -1,0 +1,79 @@
+.header {
+    position: relative;
+    top: 0;
+    min-height: 80px;
+    max-height: 80px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 0px 15px;
+}
+.checkOutButton {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 96%;
+    bottom: 25%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.homeButton {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 92%;
+    bottom: 25%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.signOutButton {
+     height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 88%;
+    bottom: 25%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.checkOutButton:active, .homeButton:active, .signOutButton:active {
+    transform: translateY(2px);
+}
+
+.checkOutButton:hover, .homeButton:hover, .signOutButton:hover {
+    opacity: 0.7;
+}
+
+
+img {
+    width: 35px;
+    position: static;
+    right: 500px;
+}
+
+h2 {
+    position: absolute;
+    left: 39%;
+    top: 0%;
+}
+
+.abcHeader{
+    cursor: pointer;
+}
+
+.loggedStatus {
+    font-size: small;
+    position: absolute;
+    left: 75%;
+    top: 15%;
+}
+

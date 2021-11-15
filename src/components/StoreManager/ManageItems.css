@@ -1,0 +1,34 @@
+.manageItemsMainHeader {
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+.adminReturnButton {
+  margin-left: 47.4%;
+  margin-bottom: 10px;
+  width: 5%;
+  height: 3%;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.manageItemNames {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.managePrice, .manageQuantity {
+    margin-top: 10px;
+    
+}
+
+.managePriceInput, .manageQuantityInput {
+    margin-left: 5px;
+}
+
+.setChangeButton {
+    margin-bottom: 5px;
+}

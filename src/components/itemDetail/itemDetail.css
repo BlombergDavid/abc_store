@@ -1,0 +1,69 @@
+.itemcontainer {
+  position: absolute;
+  left: 28%;
+  top: 5%;
+  width: 30%;
+  height: 60%;
+  
+}
+
+.itemHeader {
+    top: 20%;
+    left: 46%;
+}
+
+
+.itemImage {
+    position: absolute;
+    left: 38%;
+    top: 28%;
+    width: 500px; 
+    height: 500px;
+    display: inline;
+}
+
+.itemText1 {
+    position: absolute;
+    text-align: center;
+    left:38.5%;
+    top: 75%;
+    width: 25%;
+}
+
+.itemText2 {
+    position: absolute;
+    text-align: center;
+    left:11%;
+    top: 84%;
+    font-weight: bolder;
+}
+
+
+.itemButtons {
+    position: absolute;
+    top: 90%;
+    left: 44.2%;
+    width: 25%;
+}
+
+.returnShoppingButton {
+    position: absolute;
+    top: 90%;
+    left: 80%;
+    width: 8%;
+    height: 5%;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color:white;
+}
+
+.returnShoppingButton:active {
+    transform: translateY(2px);
+}
+
+
+

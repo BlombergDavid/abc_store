@@ -1,0 +1,16 @@
+.currentCart {
+    width: 9%;
+    position: absolute;
+    left: 88%;
+    top: 10%;
+    border-style: groove;
+    border-radius: 5%;
+    padding: 20px;
+    margin-right: 10px;
+    font-size: small;
+}
+
+.currentCartTotalPrice {
+    font-weight: 700;
+    font-size: medium;
+}

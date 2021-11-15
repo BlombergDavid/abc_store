@@ -1,0 +1,109 @@
+.addToCartButton {
+    font-weight: 500;
+    font-size: small;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color:white;
+    width: 30%;
+    height: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+    left: 6%;
+}
+
+.addToCartButton:hover {
+    background-color: green;
+}
+
+.addToCartButton:active, .plusButton:active, .minusButton:active {
+    transform: translateY(2px);
+}
+
+.plusButton {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    left: 6%;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+}
+
+.plusButton:hover {
+    background-color: green;
+}
+
+.minusButton {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    left: 6%;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+}
+
+.minusButton:hover {
+    background-color: red;
+}
+
+
+.addToCartButton, .plusButton, .minusButton, .viewDetailsButton {
+    margin-bottom: 20px;
+}
+
+.viewDetailsButton {
+    font-weight: 500;
+    font-size: small;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color:white;
+    width: 30%;
+    height: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    left: 12.1%;
+    margin-top: 15px;
+}
+
+.viewDetailsButton:active {
+    transform: translateY(2px);
+}
+
+.viewDetailsButton:hover {
+    opacity: 0.7;
+}
+
+.itemDescription, .itemPrice, .itemInStock {
+    width: 80%;
+    font-weight: lighter;
+}
+
+.itemContainer {
+    margin-top: 0%;
+    margin-left: 11%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+.itemNameList {
+    text-align: center;
+    margin-right: 45%;
+    font-size: x-large;
+}
