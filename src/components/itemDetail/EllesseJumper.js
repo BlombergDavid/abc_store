@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 const EllesseJumper = ({ cartItems, storageItems, AddProduct, RemoveProduct }) => {
-     const selectedItem = storageItems.find((x) => x.price === 3);
+     const selectedItem = storageItems.find((x) => x.id === 3);
      return (
         <div className='container'>
             <div className='itemInfo'>

@@ -11,7 +11,7 @@ import ManageItems from './StoreManager/ManageItems'
 
 import NikeJacket from './itemDetail/NikeJacket'
 import AdidasJacket from './itemDetail/AdidasJacket'
-import ElleseJumper from './itemDetail/AdidasJacket'
+import ElleseJumper from './itemDetail/EllesseJumper'
 import NikePants from './itemDetail/NikePants'
 import AdidasPants from './itemDetail/AdidasPants'
 import EllessePants from './itemDetail/EllessePants'
