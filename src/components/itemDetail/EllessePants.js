@@ -11,7 +11,7 @@ const EllessePants = ({ cartItems, storageItems, AddProduct, RemoveProduct }) =>
                     <h2 className='itemHeader'>{selectedItem.name}</h2>
                     <img className='itemImage' src={selectedItem.image} alt={selectedItem.description}/>
                     <p className='itemText1'>{selectedItem.detailedDescription}</p>
-                    <p className='itemText2'>Price: ${selectedItem.price}kr</p>
+                    <p className='itemText2'>Price: {selectedItem.price}kr</p>
                     <div className='itemButtons'>
                         <button className='plusButton' onClick={() => AddProduct(selectedItem)}>+</button>
                         <button className='addToCartButton' onClick={() => AddProduct(selectedItem)}>Add to cart</button>
