@@ -4,8 +4,18 @@ import { Link } from 'react-router-dom';
 
 
 
-const CheckOut = ({ cartItems, AddProduct, RemoveProduct }) => {
+const CheckOut = ({ cartItems, AddProduct, RemoveProduct, storageItems }) => {
     const totalPrice = cartItems.reduce((price, item) => price + item.quantity * item.price, 0);
+
+    const disableAdd = (id) => {
+        const ExistingInStorage = storageItems.find((item) => item.id === id);
+        if(ExistingInStorage && storageItems[id-1].quantity === 0) {
+            alert('Item Out of Stock');
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     return (
         <div>
@@ -28,7 +38,7 @@ const CheckOut = ({ cartItems, AddProduct, RemoveProduct }) => {
                                 </div>
                                 <div className='itemName'>{item.name}</div>
                                     <div className='manageItems'>
-                                        <button className='plusButton2' onClick={() => AddProduct(item)}>+</button>
+                                        <button disabled={!disableAdd(item.id)} className='plusButton2' onClick={() => AddProduct(item)}>+</button>
                                         <button className='minusButton2' onClick={() => RemoveProduct(item)}>-</button>
                                     </div>
                                 <div className='itemsPrice'>

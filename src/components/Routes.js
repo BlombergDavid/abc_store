@@ -27,7 +27,7 @@ const Routes = ({ cartItems, storageItems, AddProduct, RemoveProduct, asUser, Lo
                 </Route>
                 <Route exact path='/shopping/checkout'>
                     <Header asUser={asUser} NotLoggedIn={NotLoggedIn} EmptyCart={EmptyCart}/>
-                    <CheckOut cartItems={cartItems} AddProduct={AddProduct} RemoveProduct={RemoveProduct}/>
+                    <CheckOut cartItems={cartItems} AddProduct={AddProduct} RemoveProduct={RemoveProduct} storageItems={storageItems}/>
                 </Route>
                 <Route exact path='/shopping/confirmation'>
                     <Header asUser={asUser} NotLoggedIn={NotLoggedIn} EmptyCart={EmptyCart}/>

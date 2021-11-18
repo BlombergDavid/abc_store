@@ -1,11 +1,10 @@
 import React from 'react'
 import './ManageItems.css'
 import { Link } from 'react-router-dom';
-import data from '../../data/data';
+
 
 const ManageItems = ({storageItems, SetPrice, SetQuantity}) => {
-    const {productItems} = data;
-
+    
     return (
         <div className='manangeItemContainer'>
             <h1 className='manageItemsMainHeader'>Admin Page</h1>

@@ -10,6 +10,7 @@ const App = () => {
   const [cartItems, setCartItems] = useState([]);
   const [asUser, setAsUser] = useState(false);
   const [storageItems, setStorageItems] = useState(productItems);
+  const copyStorageItems = productItems;
 
 
   const AddProduct = (product) => {
@@ -62,6 +63,7 @@ const App = () => {
 
   const EmptyCart = () => {
     setCartItems((cartItems) => cartItems = []);
+    setStorageItems(copyStorageItems);
   }
 
   const SetPrice = id => e => {
