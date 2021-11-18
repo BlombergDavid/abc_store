@@ -2,12 +2,12 @@ import React from 'react'
 import { useHistory } from 'react-router-dom';
 import './ConfirmationPage.css'
 
-const ConfirmationPage = ({cartItems, EmptyCart}) => {
+const ConfirmationPage = ({cartItems, FinishPurchase}) => {
     const totalPrice = cartItems.reduce((price, item) => price + item.quantity * item.price, 0);
     const history = useHistory();
 
     function BackToShopping() {
-       EmptyCart();
+       FinishPurchase();
        history.push('/shopping')
     }
 
@@ -15,9 +15,11 @@ const ConfirmationPage = ({cartItems, EmptyCart}) => {
     return (
         <div>
             <div className='confirmationContainer'>
-                <div className='confirmationHeader'><h3>Cart Items</h3></div>
+                <div className='confirmationHeader'>
+                    <h3 className='cartItemsHeader'>Cart Items</h3>
+                </div>
                     {cartItems.length === 0 && (
-                    <div>You have not ordered anything </div>
+                    <div><p className='emptyOrderConfirm'>You have not ordered anything</p> </div>
                     )}
 
                     <div>

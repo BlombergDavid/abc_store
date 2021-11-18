@@ -19,6 +19,11 @@ const CheckOut = ({ cartItems, AddProduct, RemoveProduct, storageItems }) => {
 
     return (
         <div>
+            <Link to='/shopping'>
+                <button style={{left: 200, top: 125}} className='returnShoppingButton'>
+                    Return
+                </button>
+            </Link>
             <div className='items'>
                 <div className='itemsHeader'><h3>Cart Items</h3></div>
                     {cartItems.length === 0 && (
@@ -59,6 +64,7 @@ const CheckOut = ({ cartItems, AddProduct, RemoveProduct, storageItems }) => {
                             Confirm your order
                         </button>
                     </Link>
+                    
         </div>
         
     );

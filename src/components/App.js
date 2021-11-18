@@ -66,6 +66,10 @@ const App = () => {
     setStorageItems(copyStorageItems);
   }
 
+  const FinishPurchase = () => {
+    setCartItems((cartItems) => cartItems = []);
+  }
+
   const SetPrice = id => e => {
     let newArr = [...storageItems];
     newArr[id-1].price = e.target.value
@@ -116,7 +120,7 @@ const App = () => {
   return (
     <div>
       <Router>
-        <Routes cartItems={cartItems} storageItems={storageItems} AddProduct={AddProduct} RemoveProduct={RemoveProduct} asUser={asUser} LoggedIn={LoggedIn} NotLoggedIn={NotLoggedIn} EmptyCart={EmptyCart} SetPrice={SetPrice} SetQuantity={SetQuantity}/>
+        <Routes cartItems={cartItems} storageItems={storageItems} AddProduct={AddProduct} RemoveProduct={RemoveProduct} asUser={asUser} LoggedIn={LoggedIn} NotLoggedIn={NotLoggedIn} EmptyCart={EmptyCart} SetPrice={SetPrice} SetQuantity={SetQuantity} FinishPurchase={FinishPurchase}/>
       </Router>
     </div>
   );

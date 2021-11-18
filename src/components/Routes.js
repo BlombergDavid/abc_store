@@ -12,7 +12,7 @@ import ManageItems from './StoreManager/ManageItems'
 import ItemDetail from './itemDetail/ItemDetail'
 
 
-const Routes = ({ cartItems, storageItems, AddProduct, RemoveProduct, asUser, LoggedIn, NotLoggedIn, EmptyCart, SetPrice, SetQuantity }) => {
+const Routes = ({ cartItems, storageItems, AddProduct, RemoveProduct, asUser, LoggedIn, NotLoggedIn, EmptyCart, SetPrice, SetQuantity, FinishPurchase }) => {
     return (
         <div>
             <Switch>
@@ -31,7 +31,7 @@ const Routes = ({ cartItems, storageItems, AddProduct, RemoveProduct, asUser, Lo
                 </Route>
                 <Route exact path='/shopping/confirmation'>
                     <Header asUser={asUser} NotLoggedIn={NotLoggedIn} EmptyCart={EmptyCart}/>
-                    <ConfirmationPage cartItems={cartItems} EmptyCart={EmptyCart}/>
+                    <ConfirmationPage cartItems={cartItems} FinishPurchase={FinishPurchase}/>
                 </Route>
                 <Route exact path='/admin'>
                     <LoginHeader />
