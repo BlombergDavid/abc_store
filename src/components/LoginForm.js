@@ -52,7 +52,7 @@ function handleSumbit (event) {
                     <Link to='/shopping'><button className='asGuestButton' onClick={NotLoggedIn}>Shop as guest</button></Link>
                 </form>
                 { displayError ? <p className='errorLogin'>Incorrect username and/or password</p> : null }
-                <h3 className='infoMessage'>Notice: This is only a prototype done for a fictive company, nothing here should be taken to seriously.</h3>
+                <h3 className='infoMessage'>Notice: This is only a prototype done for a fictive company, nothing here should be taken too seriously.</h3>
                 <h4 className='signature'> David Blomberg</h4>
             </div>
     );

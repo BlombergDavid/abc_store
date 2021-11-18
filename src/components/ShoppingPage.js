@@ -4,13 +4,24 @@ import { Link } from 'react-router-dom';
 
 
 
-const ShoppingPage = ({ AddProduct, RemoveProduct, storageItems}) => {
+const ShoppingPage = ({ AddProduct, cartItems, RemoveProduct, storageItems}) => {
     //const totalPrice = cartItems.reduce((price, item) => price + item.quantity * item.price, 0);
+
+   /*  const baseLinkTo = '/shopping/item?id='; */
    
     function viewItemDetails(idNr) {
-        var link = '/shopping/';
+        var link =  '/shopping/item?id=';
         var result = link.concat(idNr);
         return result;
+    }
+
+    function checkIfCartEmpty(idNr) {
+        const inCart = cartItems.find((item) => item.id === idNr);
+        if(inCart) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     
@@ -27,9 +38,9 @@ const ShoppingPage = ({ AddProduct, RemoveProduct, storageItems}) => {
                     <li className='itemInStock'>In Stock: {item.quantity}</li>
                     <Link to={viewItemDetails(item.id)}><button className='viewDetailsButton'>View Details</button></Link>
                     <br/>
-                    <button className='plusButton' onClick={() => AddProduct(item)}>+</button>
-                    <button className='addToCartButton' onClick={() => AddProduct(item)}>Add to cart</button>
-                    <button className='minusButton' onClick={() => RemoveProduct(item)}>-</button>
+                    <button className='plusButton' disabled={item.quantity < 1} onClick={() => AddProduct(item)}>+</button>
+                    <button className='addToCartButton' disabled={item.quantity < 1} onClick={() => AddProduct(item)}>Add to cart</button>
+                    <button className='minusButton' disabled={checkIfCartEmpty(item.id)} onClick={() => RemoveProduct(item)}>-</button>
                     </div>
                 ))}   
             </div>

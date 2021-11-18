@@ -9,15 +9,7 @@ import CurrentCart from './CurrentCart'
 import ConfirmationPage from './ConfirmationPage'
 import ManageItems from './StoreManager/ManageItems'
 
-import NikeJacket from './itemDetail/NikeJacket'
-import AdidasJacket from './itemDetail/AdidasJacket'
-import ElleseJumper from './itemDetail/EllesseJumper'
-import NikePants from './itemDetail/NikePants'
-import AdidasPants from './itemDetail/AdidasPants'
-import EllessePants from './itemDetail/EllessePants'
-import NikeShoes from './itemDetail/NikeShoes'
-import AdidasShoes from './itemDetail/AdidasShoes'
-import EllesseShoes from './itemDetail/EllesseShoes'
+import ItemDetail from './itemDetail/ItemDetail'
 
 
 const Routes = ({ cartItems, storageItems, AddProduct, RemoveProduct, asUser, LoggedIn, NotLoggedIn, EmptyCart, SetPrice, SetQuantity }) => {
@@ -30,14 +22,46 @@ const Routes = ({ cartItems, storageItems, AddProduct, RemoveProduct, asUser, Lo
                 </Route>
                 <Route exact path='/shopping'>
                     <Header asUser={asUser} NotLoggedIn={NotLoggedIn} EmptyCart={EmptyCart}/>
-                    <ShoppingPage storageItems={storageItems} AddProduct={AddProduct} RemoveProduct={RemoveProduct}/>
+                    <ShoppingPage storageItems={storageItems} cartItems={cartItems} AddProduct={AddProduct} RemoveProduct={RemoveProduct}/>
                     <CurrentCart cartItems={cartItems}/>
                 </Route>
                 <Route exact path='/shopping/checkout'>
                     <Header asUser={asUser} NotLoggedIn={NotLoggedIn} EmptyCart={EmptyCart}/>
                     <CheckOut cartItems={cartItems} AddProduct={AddProduct} RemoveProduct={RemoveProduct}/>
                 </Route>
-                <Route exact path='/shopping/1'>
+                <Route exact path='/shopping/confirmation'>
+                    <Header asUser={asUser} NotLoggedIn={NotLoggedIn} EmptyCart={EmptyCart}/>
+                    <ConfirmationPage cartItems={cartItems} EmptyCart={EmptyCart}/>
+                </Route>
+                <Route exact path='/admin'>
+                    <LoginHeader />
+                    <ManageItems storageItems={storageItems} SetPrice={SetPrice} SetQuantity={SetQuantity} />
+                </Route>
+                <Route exact path='/shopping/item'>
+                    <Header asUser={asUser} NotLoggedIn={NotLoggedIn} EmptyCart={EmptyCart}/>
+                    <ItemDetail cartItems={cartItems} storageItems={storageItems} AddProduct={AddProduct} RemoveProduct={RemoveProduct}/>
+                    <CurrentCart cartItems={cartItems}/>
+                </Route>
+            </Switch>
+        </div>
+    )
+}
+
+export default Routes
+
+
+/* 
+import NikeJacket from './itemDetail/NikeJacket'
+import AdidasJacket from './itemDetail/AdidasJacket'
+import ElleseJumper from './itemDetail/EllesseJumper'
+import NikePants from './itemDetail/NikePants'
+import AdidasPants from './itemDetail/AdidasPants'
+import EllessePants from './itemDetail/EllessePants'
+import NikeShoes from './itemDetail/NikeShoes'
+import AdidasShoes from './itemDetail/AdidasShoes'
+import EllesseShoes from './itemDetail/EllesseShoes' */
+
+  /*  <Route exact path='/shopping/1'>
                     <Header asUser={asUser} NotLoggedIn={NotLoggedIn} EmptyCart={EmptyCart}/>
                     <NikeJacket cartItems={cartItems} storageItems={storageItems} AddProduct={AddProduct} RemoveProduct={RemoveProduct}/>
                     <CurrentCart cartItems={cartItems}/>
@@ -81,18 +105,4 @@ const Routes = ({ cartItems, storageItems, AddProduct, RemoveProduct, asUser, Lo
                     <Header asUser={asUser} NotLoggedIn={NotLoggedIn} EmptyCart={EmptyCart}/>
                     <EllesseShoes cartItems={cartItems} storageItems={storageItems} AddProduct={AddProduct} RemoveProduct={RemoveProduct}/>
                     <CurrentCart cartItems={cartItems}/>
-                </Route>
-                <Route exact path='/shopping/confirmation'>
-                    <Header asUser={asUser} NotLoggedIn={NotLoggedIn} EmptyCart={EmptyCart}/>
-                    <ConfirmationPage cartItems={cartItems} EmptyCart={EmptyCart}/>
-                </Route>
-                <Route exact path='/admin'>
-                    <LoginHeader />
-                    <ManageItems storageItems={storageItems} SetPrice={SetPrice} SetQuantity={SetQuantity} />
-                </Route>
-            </Switch>
-        </div>
-    )
-}
-
-export default Routes
+                </Route> */

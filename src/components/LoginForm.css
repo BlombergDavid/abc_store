@@ -25,8 +25,9 @@
 .loginForm {
     width: 20%;
     height: 20%;
-    border-style: groove;
-    border-radius: 5%;
+    border-style:solid;
+    border-color: silver;
+    border-radius: 10%;
     padding: 25px;
     padding-top: 10px;
     justify-content: center;
@@ -72,6 +73,15 @@
     margin-left: 40px;
     margin-right: 25px;
 }
+
+.loginButton:active, .asGuestButton:active {
+    transform: translateY(2px);
+}
+
+.loginButton:hover, .asGuestButton:hover {
+    opacity: 0.7;
+}
+
 
 .infoMessage {
     text-align: center;
