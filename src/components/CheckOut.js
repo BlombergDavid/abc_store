@@ -10,7 +10,7 @@ const CheckOut = ({ cartItems, AddProduct, RemoveProduct, storageItems }) => {
     const disableAdd = (id) => {
         const ExistingInStorage = storageItems.find((item) => item.id === id);
         if(ExistingInStorage && storageItems[id-1].quantity === 0) {
-            alert('Item Out of Stock');
+            console.log('Item Out of Stock');
             return false;
         } else {
             return true;
