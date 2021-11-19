@@ -31,9 +31,9 @@ const Header = ({ asUser, NotLoggedIn, EmptyCart }) => {
                 <h2>Your favorite online shop</h2>
                 <hr></hr>
                 { asUser ? <p className='loggedStatus'>Shopping as David Blomberg</p> : <p className='loggedStatus'>Shopping as guest</p> }
-                <button className='homeButton' onClick={GoToHome}><img src={bagIcon} alt="checkout icon"/></button>
-                <button className='checkOutButton' onClick={GoToCheckOut}><img src={checkoutIcon} alt="checkout icon"/></button>
-                <button className='signOutButton' onClick={LogOut}><img src={signOutIcon} alt="checkout icon"/></button>
+                <button className='homeButton' onClick={GoToHome}><img src={bagIcon} alt="home icon" title="Go to Home"/></button>
+                <button className='checkOutButton' onClick={GoToCheckOut}><img src={checkoutIcon} alt="checkout icon" title='Check Out'/></button>
+                <button className='signOutButton' onClick={LogOut}><img src={signOutIcon} alt="sign out icon" title='Sign Out'/></button>
             </div>
         </header>
     )

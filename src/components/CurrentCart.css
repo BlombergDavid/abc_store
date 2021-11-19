@@ -14,3 +14,13 @@
     font-weight: 700;
     font-size: medium;
 }
+
+.emptyCartButton {
+    margin-left: 20%;
+    border-radius: 15px;
+    width: 60%;
+    height: 35%;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: darkgray;
+}

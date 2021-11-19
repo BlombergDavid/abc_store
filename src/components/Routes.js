@@ -23,7 +23,7 @@ const Routes = ({ cartItems, storageItems, AddProduct, RemoveProduct, asUser, Lo
                 <Route exact path='/shopping'>
                     <Header asUser={asUser} NotLoggedIn={NotLoggedIn} EmptyCart={EmptyCart}/>
                     <ShoppingPage storageItems={storageItems} cartItems={cartItems} AddProduct={AddProduct} RemoveProduct={RemoveProduct}/>
-                    <CurrentCart cartItems={cartItems}/>
+                    <CurrentCart cartItems={cartItems} EmptyCart={EmptyCart}/>
                 </Route>
                 <Route exact path='/shopping/checkout'>
                     <Header asUser={asUser} NotLoggedIn={NotLoggedIn} EmptyCart={EmptyCart}/>
@@ -40,7 +40,7 @@ const Routes = ({ cartItems, storageItems, AddProduct, RemoveProduct, asUser, Lo
                 <Route exact path='/shopping/item'>
                     <Header asUser={asUser} NotLoggedIn={NotLoggedIn} EmptyCart={EmptyCart}/>
                     <ItemDetail cartItems={cartItems} storageItems={storageItems} AddProduct={AddProduct} RemoveProduct={RemoveProduct}/>
-                    <CurrentCart cartItems={cartItems}/>
+                    <CurrentCart cartItems={cartItems} EmptyCart={EmptyCart}/>
                 </Route>
             </Switch>
         </div>

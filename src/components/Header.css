@@ -23,6 +23,8 @@
     bottom: 25%;
     background-color: white;
     cursor: pointer;
+    border-radius: 25px;
+    border-style: none;
 }
 
 .homeButton {
@@ -33,6 +35,8 @@
     bottom: 25%;
     background-color: white;
     cursor: pointer;
+    border-radius: 25px;
+    border-style: none;
 }
 
 .signOutButton {
@@ -43,6 +47,8 @@
     bottom: 25%;
     background-color: white;
     cursor: pointer;
+    border-radius: 25px;
+    border-style: none;
 }
 
 .checkOutButton:active, .homeButton:active, .signOutButton:active {

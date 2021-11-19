@@ -40,6 +40,14 @@
     font-weight: bolder;
 }
 
+.itemDetailStock {
+    position: absolute;
+    text-align: center;
+    left:48.7%;
+    top: 86%;
+    font-weight: lighter;
+}
+
 
 .itemButtons {
     position: absolute;
